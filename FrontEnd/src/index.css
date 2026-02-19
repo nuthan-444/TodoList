@@ -385,3 +385,259 @@ form p {
 .already-have-account:hover {
     text-decoration: underline;
 }
+
+
+
+@media only screen and (max-width:600px) {
+    .login-page-div {
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    text-align: center;
+    transition: all 0.2s ease ;
+}
+
+.Signup-page-div {
+    border-radius: 10px;
+    width: 400px;
+    height: 670px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    text-align: center;
+    box-shadow: 3px 3px 40px rgba(12, 12, 12, 0.89);
+    transition: all 0.2s ease ;
+}
+
+
+.Adding-Todo-List-Div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(133, 133, 133, 0.459);
+    width: 350px;
+    height: 70px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    padding-right: 20px;
+}
+
+.Adding-Todo-List-Div input {
+    width: 70%;
+    height: 70%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.Adding-Todo-List-Div i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.Adding-Todo-List-Div i:hover {
+    background-color: rgba(255, 255, 255, 0.493);
+}
+
+.Log-out {
+    width: 130px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.329);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.Log-out:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* todo text ,delete all */
+
+.text--my-todo {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    color: white;
+}
+
+.buttons-in-todo{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btns-in-todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.btns-in-todo:hover {
+    background-color: rgba(255, 255, 255, 0.493);
+    rotate: 360deg;
+}
+   
+
+
+.DeleteAll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    border-radius: 50%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.DeleteAll-btn:hover {
+    background-color: rgba(255, 255, 255, 0.493);
+}
+
+
+
+/* todos */
+
+.todo-lists-div {
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    position: absolute;
+    top: 32%;
+    left: 54%;
+    transform: translate(-50%);
+    padding-right: 40px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+    scroll-behavior: smooth;
+    padding-top: 10px;
+}
+
+
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 10px;
+    width: 83%;
+    height: 13%;
+    background-color: rgba(133, 133, 133, 0.39);
+    border-radius:40px ;
+    transition: all 0.2s;
+}
+
+.todo-item:hover {
+    background-color: rgba(133, 133, 133, 0.137);
+}
+.todo-item .Check-Box{
+    size: 50px;
+    cursor: pointer;
+}
+
+.todo-item .todo-title {
+    width: 200px;
+    margin-left: 30px;
+    text-align: start;
+    margin-right: 50%;
+    color: white;
+    font-size: 20px;
+}
+
+.todo-item span {
+    color: white;
+
+}
+
+
+.Empty-Todo{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+
+/* filter */
+.Filter-bar {
+    margin-top: 10px;
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    width: 400px;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.Filter-bar .Filter-options {
+    width: fit-content;
+    padding: 20px;
+    color: white;
+    background-color: #fff9f938;
+    /* padding: 10px 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.Filter-bar .Filter-options:hover {
+    color: black;
+    background-color: #ffffffe0;
+}
+
+.Empty-Todo{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 0%;
+    top: 10%;
+}
+
+}
