@@ -20,19 +20,15 @@ const Login = () => {
 
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/login`,{email:emailValue,password:passwordValue});
-      if(response.data === "Login Successful"){
+      if(response.data.status){
         setIsUserLogin(true);
         setUserEmail(emailValue);  
         navigate("/");
         fetchTodos();
-      } else {
-        alert(response.data);
       }
     } catch (error) {
-        alert("Something went wrong!");
+        alert(error.response?.data?.message || "Client error");
     }
-    setEmailValue("")
-    setPasswordValue("")
 }
 
   return (

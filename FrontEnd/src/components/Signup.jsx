@@ -43,14 +43,13 @@ const Signup = () => {
 
     if (!isSignedup) return;
 
+
+
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/api/signup`,
-        { name: userValue, email: emailValue, password: passwordValue }
-      );
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/signup`,{ name: userValue, email: emailValue, password: passwordValue });
 
 
-      if (response.data.message === "Signup Successful") {
+      if (response.data.status) {
         localStorage.setItem("userEmail", emailValue);
 
         setUserEmail(emailValue);   
@@ -62,17 +61,10 @@ const Signup = () => {
           fetchTodos();
         }, 50);
         
-      } else {
-        alert(response.data.message);
       }
     } catch (error) {
-      alert("axios error : ", error);
+      alert(error.response?.data?.message || "Client Error");
     }
-
-    setUserValue("");
-    setPasswordValue("");
-    setConfirmPasswordValue("");
-    setEmailValue("");
   };
 
   return (

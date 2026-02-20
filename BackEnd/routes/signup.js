@@ -11,11 +11,24 @@ router.get("/",async(req,res) => {
 //creating user account
 router.post("/" , async(req,res) => {
     const {name,email,password} = req.body;
+
+    if(!name || !email || !password) {
+        return res.status(400).json({status:false,message:"All fields are must filled."});
+    }
     try {
+
+        const isEmailAlreadyExist = await Signup.findOne({email});
+
+        if(isEmailAlreadyExist) {
+            return res.status(400).json({status:false,message:"Already Account exist with this email."});
+        }
+
         const CreatingUser = await Signup.create({name,email,password});
-        res.json({message:"Signup Successful"});
+
+        return res.status(201).json({status:true,message:"Account Created Successfully."});
+
     } catch (error) {
-        res.json({message:"User with this email already exists."});
+        return res.status(500).json({status:false,message:"Server error",error});
     }
 });
 

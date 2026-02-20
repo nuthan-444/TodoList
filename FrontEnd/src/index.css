@@ -170,6 +170,7 @@ body {
 
 .todo-item .todo-title {
     width: 200px;
+    height: fit-content;
     margin-left: 30px;
     text-align: start;
     margin-right: 50%;
@@ -482,7 +483,7 @@ form p {
 .text--my-todo {
     position: absolute;
     top: 20%;
-    left: 40%;
+    left: 37%;
     color: white;
 }
 
@@ -496,7 +497,9 @@ form p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    flex-direction: row;
+    gap: 10px;
+    width: fit-content;
     height: 40px;
     color: white;
     font-size: 15px;
@@ -505,7 +508,7 @@ form p {
     cursor: pointer;
 }
 .btns-in-todo:hover {
-    background-color: rgba(255, 255, 255, 0.493);
+    background-color: rgba(255, 255, 255, 0);
     rotate: 360deg;
 }
    
@@ -520,8 +523,8 @@ form p {
     color: white;
     font-size: 20px;
     position: absolute;
-    top: 20%;
-    left: 65%;
+    top: 19.5%;
+    left: 80%;
     border-radius: 50%;
     transition: all 0.4s;
     cursor: pointer;
@@ -577,9 +580,10 @@ form p {
 
 .todo-item .todo-title {
     width: 200px;
+    height: fit-content;
     margin-left: 30px;
     text-align: start;
-    margin-right: 50%;
+    margin-right: 5%;
     color: white;
     font-size: 20px;
 }
